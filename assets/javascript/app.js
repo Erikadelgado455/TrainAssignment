@@ -6,6 +6,19 @@ $(document).ready(function () {
         projectId: "train-scheduler-95439",
         storageBucket: "train-scheduler-95439.appspot.com",
         messagingSenderId: "779973586607"
-
-    }
-})
+    };
+    firebase.initializeApp(config);
+    var database = firebase.database();
+    $("#submit").on("click", function () {
+        var trainName = $("#train-name").val().trim();
+        var destination = $("#destination").val().trim();
+        var startTime = $("#start-time").val().trim();
+        var freq = $("#frequency").val().trim();
+        var newTrain = {
+            name: trainName,
+            destination: destination,
+            start: startTime,
+            freq: freq
+        };
+    })
+});

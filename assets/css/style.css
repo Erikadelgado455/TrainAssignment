@@ -1,0 +1,15 @@
+h1{
+    font-family: 'Playfair Display', serif;
+    color: white;
+}
+
+body, html {
+    height: 100%;
+}
+
+.background { 
+    background-image: url("../images/trains.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
