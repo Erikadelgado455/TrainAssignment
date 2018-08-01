@@ -13,3 +13,21 @@ body, html {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.container {
+    padding-bottom: 30px;
+}
+
+.card-header {
+    background-color: red;
+    font-family: 'Playfair Display', serif;
+    color: white;
+    font-weight: bold;
+}
+
+#jumbo {
+    opacity: 0.9;
+    text-align: center;
+    background-color: red;
+    border-radius: 15px;
+}
