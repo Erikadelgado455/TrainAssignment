@@ -18,7 +18,7 @@ $(document).ready(function () {
             name: trainName,
             destination: destination,
             start: startTime,
-            freq: freq
-        };
+            freq: freq,
+        }; 
     })
 });
