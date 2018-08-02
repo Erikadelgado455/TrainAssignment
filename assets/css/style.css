@@ -49,3 +49,21 @@ tr:nth-child(even) {
     background-color: #dddddd;
 }
 
+#schedule {
+    opacity: 0.9;
+}
+
+#add-train {
+    margin-top: 30px;
+    opacity: 0.9;
+    font-family: 'Playfair Display', serif;
+
+}
+
+#submit{
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    color: black;
+    background-color: red;
+    border-color: black
+}
