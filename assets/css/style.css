@@ -31,3 +31,13 @@ body, html {
     background-color: red;
     border-radius: 15px;
 }
+
+table {
+    font-family: 'Playfair Display', serif;
+    border-collapse: collapse;
+    width: 100%;
+    color:black
+}
+
+
+
