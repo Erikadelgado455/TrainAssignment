@@ -19,6 +19,17 @@ $(document).ready(function () {
             destination: destination,
             start: startTime,
             freq: freq,
-        }; 
+        };
+        database.ref().push(newTrain);
+        console.log(newTrain.name);
+        console.log(newTrain.destination);
+        console.log(newTrain.start);
+        console.log(newTrain.freq);
+        $("#train-name").val("");
+        $("#destination").val("");
+        $("#start-time").val("");
+        $("#frequency").val("");
+
     })
+    
 });
