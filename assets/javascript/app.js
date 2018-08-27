@@ -31,5 +31,14 @@ $(document).ready(function () {
         $("#frequency").val("");
 
     })
-    
+    database.ref().on("child_added", function (childSnapshot) {
+        var trainName = childSnapshot.val().name;
+        var destination = childSnapshot.val().destination;
+        var startTime = childSnapshot.val().start;
+        var freq = childSnapshot.val().freq;
+        var startTimeConverted = moment(startTime, "HH:mm").subtract(1, "years");
+        console.log(startTimeConverted);
+        var currentTime = moment();
+        console.log("Current time: " + moment(currentTime).format("hh:mm"));
+    })
 });
