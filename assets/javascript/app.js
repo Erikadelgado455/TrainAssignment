@@ -40,5 +40,21 @@ $(document).ready(function () {
         console.log(startTimeConverted);
         var currentTime = moment();
         console.log("Current time: " + moment(currentTime).format("hh:mm"));
+        var diffTime = moment().diff(moment(startTimeConverted), "minutes");
+        console.log("Difference in time: " + diffTime);
+        var tRemainder = diffTime % freq;
+        console.log("Time apart: " + tRemainder);
+        var minutesAway = freq - tRemainder;
+        console.log("Minutes away: " + minutesAway);
+        var nextTrain = moment().add(minutesAway, "minutes");
+        console.log("Arrival time: " + moment(nextTrain).format("hh:mm"));
+        var newRow = $("<tr>").append(
+            $("<td>").text(trainName),
+            $("<td>").text(destination),
+            $("<td>").text(freq),
+            $("<td>").text(moment(nextTrain).format("hh:mm")),
+            $("<td>").text(minutesAway),
+        )
+        $("#train-table > tbody").append(newRow);
     })
 });
